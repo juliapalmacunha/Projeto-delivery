@@ -119,7 +119,7 @@ function atualizarcarrinho(){
             </div>
 
              <div>
-              <button class= "removeritem rounded hover:bg-[#e4e4e4]" data-name="${item.nome}">
+              <button class= "removeritem rounded hover:bg-[#e4e4e4] py-[1px] px-4 border border-slate-400" data-name="${item.nome}">
                Remover
               </button>
             </div>
@@ -178,6 +178,7 @@ endereco.addEventListener("input", function(event){
 
 
 //FINALIZAR CARRINHO
+//ALERT
 //MOSTRAR QUANDO O ENDEREÇO NAO ESTIVER PREENCHIDO
 finalizarcarrinho.addEventListener("click", function(){
 
@@ -200,14 +201,14 @@ finalizarcarrinho.addEventListener("click", function(){
     }
 
     
-
+    //CASO A LISTA DO CARRINHO ESTEJA VAZIA OU A CAIXA DE ENDEREÇO ESTIVER VAZIA
     if(listaCarrinho.length === 0 ) return;
     if(endereco.value === ""){
         enderecoerrado.classList.remove("hidden");
         endereco.classList.add("border-red-500")
-    }
+    }else{
 
-    //ENVIAR PEDIDO PARA APO WHATS
+        //ENVIAR PEDIDO PARA APO WHATS
      const pedido = listaCarrinho.map((item) => {
         return(
          `${item.nome} \n Quantidade: ${item.quantidade} \n Preço: ${item.preco} | \n`
@@ -223,6 +224,10 @@ finalizarcarrinho.addEventListener("click", function(){
      //LIMPAR CARRINHO POS FINALIZAÇÃO
      listaCarrinho = [];
      atualizarcarrinho();
+
+    }
+
+    
 })
 
 

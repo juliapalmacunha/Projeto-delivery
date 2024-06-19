@@ -1932,6 +1932,11 @@ video {
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
+.border-slate-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(148 163 184 / var(--tw-border-opacity));
+}
+
 .bg-\[\#030502\] {
   --tw-bg-opacity: 1;
   background-color: rgb(3 5 2 / var(--tw-bg-opacity));
@@ -2134,6 +2139,11 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-\[1px\] {
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .pt-1 {
