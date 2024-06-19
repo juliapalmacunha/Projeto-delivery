@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    
+    
+        
+
+
+    <link rel="stylesheet" href="styles/output.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <title>Olimpo Gourmet</title>
+</head>
+<body>
+
+
+    <!--INICIO CABEÇALHO HEADER-->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+
+        <div class="w-full h-full flex flex-col justify-center items-center">
+
+            <div class="bg-[#030502] rounded-full">
+                <img src="assets/logo.png"
+                 alt="Mitologia Gourmet"
+                 class="w-32 h-32 rounded-full shadow-lg bg-cover "
+                 />
+            </div>
+             <h1 class="text-3x1 mt-4xl mb-2 font-poppins font-semibold text-3xl text-white">Olimpo Gourmet</h1>
+             
+             <span class="text-white font-poppins font-mregular"> <i class="fa-thin fa-location-dot"></i> Avenida Antonio Basílio 3503 - Lagoa Nova</span>
+
+             <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="caixadohorario">
+                <span class="text-white font-poppins font-mregular">Seg á Dom - 18:00 as 23:00</span>
+            </div>
+
+        </div>
+
+    </header>
+    <!--FIM CABEÇALHO HEADER-->
+
+    <h2 class="text-2xl md:text-3xl font-bebas text-[#8B4513] text-center mt-9 mb-6">
+        Conheça nosso Menu
+    </h2>
+
+
+    <!--CAIXA DO MEU MENU-->
+    <div id="menu">
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16 mt-10">
+
+            <!-- INICIO DO PRODUTO-->
+            <div class="flex gap-2 rounded-lg shadow-black">
+                <img src="assets/hercules.jpg"
+                alt="Hercules Burguer"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-roboto font-mligth pt-1 text-marromescuro">Hercules Burguer</p>
+                    <p class="font-montserrat font-mligth text-xs pt-1 text-marromescuro">Hambúrguer de carne angus com alface, tomate, cebola roxa, picles, queijo cheddar e maionese artesanal</p>
+                
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                          <p class="font-roboto font-mbold text-preto">R$ 18.90</p>
+                       <button 
+                        class="bg-[#8B4513] px-5 rounded-md mr-2 botao-comprar-item"
+                        data-name="Hercules Burguer"
+                        data-price="18.90"
+                        >
+                          <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--FIM PRODUTO-->
+
+            <!--NOVO PRODUTO-->
+            <div class="flex gap-2 rounded-lg shadow-black">
+                <img src="assets/zeus.jpg"
+                alt="Hercules Burguer"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-roboto font-mligth pt-1 text-cinzaclaro">Zeus Burguer</p>
+                    <p class="font-montserrat font-mligth text-xs pt-1 text-cinzaclaro">Hambúrguer de carne angus com alface, tomate, cebola roxa, picles, queijo cheddar e maionese artesanal</p>
+                
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                      <p class="font-roboto font-mbold text-cinzaclaro">R$ 27.90</p>
+                       <button 
+                        class="bg-[#8B4513] px-5 rounded-md mr-2  botao-comprar-item"
+                        data-name="Zeus Burguer"
+                        data-price="27.90"
+                        >
+
+                          <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--FIM DO PORDUTO-->
+
+            <!--NOVO PORDUTO-->
+            <div class="flex gap-2 rounded-lg shadow-black">
+                <img src="assets/athena.jpg"
+                alt="Athena Burguer"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-roboto font-mligth pt-1 text-cinzaclaro">Athena Burguer</p>
+                    <p class="font-montserrat font-mligth text-xs pt-1 text-cinzaclaro">Hambúrguer de carne angus com alface, tomate, cebola roxa, picles, queijo cheddar e maionese artesanal</p>
+                
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                      <p class="font-roboto font-mbold text-cinzaclaro">R$ 27.90</p>
+                       <button 
+                        class="bg-[#8B4513] px-5 rounded-md mr-2  botao-comprar-item"
+                        data-name="Athena Burguer"
+                        data-price="27.90"
+                        >
+
+                          <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--FIM DO PRODUTO-->
+
+
+            <!--NOVO PORDUTO-->
+            <div class="flex gap-2 rounded-lg shadow-black">
+                <img src="assets/apolo.jpg"
+                alt="Apolo Burguer"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-roboto font-mligth pt-1 text-cinzaclaro">Apolo Burguer</p>
+                    <p class="font-montserrat font-mligth text-xs pt-1 text-cinzaclaro">Hambúrguer de carne angus com alface, tomate, cebola roxa, picles, queijo cheddar e maionese artesanal</p>
+                
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                      <p class="font-roboto font-mbold text-cinzaclaro">R$ 37.90</p>
+                       <button 
+                        class="bg-[#8B4513] px-5 rounded-md mr-2  botao-comprar-item"
+                        data-name="Apolo Burguer"
+                        data-price="27.90"
+                        >
+
+                          <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--FIM DO PRODUTO-->
+
+
+            <!--NOVO PORDUTO-->
+            <div class="flex gap-2 rounded-lg shadow-black">
+                <img src="assets/hades.jpg"
+                alt="Hades Burguer"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-roboto font-mligth pt-1 text-cinzaclaro">Hades Burguer</p>
+                    <p class="font-montserrat font-mligth text-xs pt-1 text-cinzaclaro">Hambúrguer de carne angus com alface, tomate, cebola roxa, picles, queijo cheddar e maionese artesanal</p>
+                
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                      <p class="font-roboto font-mbold text-cinzaclaro">R$ 27.90</p>
+                       <button 
+                        class="bg-[#8B4513] px-5 rounded-md mr-2  botao-comprar-item"
+                        data-name="Hades Burguer"
+                        data-price="27.90"
+                        >
+
+                          <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--FIM DO PORDUTO-->
+
+
+            <!--NOVO PORDUTO-->
+            <div class="flex gap-2 rounded-lg shadow-black">
+                <img src="assets/tita.jpg"
+                alt="Titã Burguer"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+                />
+
+                <div>
+                    <p class="font-roboto font-mligth pt-1 text-cinzaclaro">Titã Burguer</p>
+                    <p class="font-montserrat font-mligth text-xs pt-1 text-cinzaclaro">Hambúrguer de carne angus com alface, tomate, cebola roxa, picles, queijo cheddar e maionese artesanal</p>
+                
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                      <p class="font-roboto font-mbold text-cinzaclaro">R$ 27.90</p>
+                       <button 
+                        class="bg-[#8B4513] px-5 rounded-md mr-2  botao-comprar-item"
+                        data-name="Titã Burguer"
+                        data-price="27.90"
+                        >
+
+                          <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--FIM DO PRODUTO-->
+
+        </main>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bebas text-3xl text-[#8B4513]">
+                Bebidas
+            </h2>
+        </div>
+
+        <!--CAIXA DE BEBIDAS-->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu" >
+
+             <!--NOVO PORDUTO -->
+             <div class="flex gap-2 w-full rounded-lg shadow-black">
+                <img src="assets/coca.jpg"
+                alt="Coca lata"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+                />
+
+                <div class="w-full">
+
+                    <p class="font-roboto font-mligth pt-1 text-cinzaclaro">Coca lata</p>
+                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                      <p class="font-roboto font-mbold text-cinzaclaro">R$ 8</p>
+                       <button 
+                        class="bg-[#8B4513] px-5 rounded-md mr-2  botao-comprar-item"
+                        data-name="Coca lata"
+                        data-price="8"
+                        >
+
+                          <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--FIM DO PRODUTO-->
+
+        </div>
+        <!--FIM DA CAIXA DE BEBIDAS-->
+
+    </div>
+    <!--FIM DO MENU-->
+    
+    <!--BOTAO DO CARRINHO E RODAPE-->
+    <footer class="w-full bg-[#dd4629] py-3 fixed bottom-0 z-40 flex items-center justify-center hover:bg-[#ff4646] rodape" id="rodape-carrinho">
+
+        <button 
+        class="flex items-center gap-2 text-white font-bold" id="botao-carrinho">
+
+            (<span id="quantid-itens-carrinho">0</span>)
+            Veja meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+ 
+        </button>
+
+    </footer>
+    <!--FIM DO BOTAO DO CARRINHO E RODAPE-->
+
+
+    <!--DENTRO DO CARRINHO-->
+    <div 
+    class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] hidden items-center justify-center"
+    id="carrinho"
+    >
+
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+            <div id="itens-carrinho" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold">Total: <span id="preço-total">0.00</span> </p>
+
+    
+                <p class="font-bold mt-4">Endereço de entrega</p>
+            
+
+
+            
+            <input 
+            type="text"
+            placeholder="Digite sue endereço completo..."
+            id="endereço"
+            class="w-full border-2 p-1 rounded my-1"
+            autocomplete="username"
+            />
+
+            <p class="text-red-500 hidden" id="endereço-errado">Digite seu endereço completo</p>
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="fechar-carrinho" class="hover:bg-[#e4e4e4] rounded">Fechar</button>
+                <button id="finalizar-carrinho" class="bg-green-500 text-white px-4 py-1 rounded hover:bg-green-600">Finalizar pedido</button>
+            </div>
+
+        </div>
+
+    </div>
+    <!--FIM DE DENTRO DO CARRINHO-->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
