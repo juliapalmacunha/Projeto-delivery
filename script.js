@@ -108,20 +108,40 @@ function atualizarcarrinho(){
 
         caixadoitem.classList.add("flex", "justify-between", "mb-4", "flex-col")
 
+        let trocatroca = '';
+        if (item.quantidade > 1) {
+            trocatroca = '<i class="fa-solid fa-minus"></i>';
+        } else {
+            trocatroca = '<i class="fa-solid fa-trash-can"></i>';
+        }
+
         //CAIXA DO HAMBURGUER+INFORMSÇÕES
         caixadoitem.innerHTML = `
-         <div class="flex itens-center justify-between">
+         <div class="flex items-center justify-between">
 
             <div>
+
               <p class="font-medium">${item.nome}</p>
               <p>Qtd: ${item.quantidade}</p>
               <p class="font-medium mt-2">R$ ${item.preco}</p>
             </div>
 
              <div>
-              <button class= "removeritem rounded hover:bg-[#e4e4e4] py-[1px] px-4 border border-slate-400" data-name="${item.nome}">
-               Remover
-              </button>
+
+              <div class= "flex space-x-4 justify-center items-center rounded hover:bg-[#e4e4e4] py-[1px] px-4 border border-slate-400" data-name="${item.nome}" 
+              data-price="${item.preco}" >
+
+               <button class= "removeritem">
+               ${trocatroca}
+               </button>
+
+               <p> ${item.quantidade} </p>
+
+               <button class= "adicionandoitem">
+                 <i class="fa-solid fa-plus"></i>
+               </button>
+              </div>
+
             </div>
 
          </div>
@@ -142,12 +162,20 @@ function atualizarcarrinho(){
 }
 
 
-//FUNÇÃO PARA REMOVER O ITEM DO CARRINHO
+//FUNÇÃO PARA REMOVER O ITEM DO CARRINHO E ADICIONAR TAMBEM
 //entra dentro do carrinho que o removeritem esta, se clicar no evento onde a classe é removeritem, que é o botao entao faça algo
 itensCarrinho.addEventListener("click", function (event){
-    if(event.target.classList.contains("removeritem")){
-        const nomedoitem = event.target.getAttribute("data-name")
-        removeItemCarrinho(nomedoitem)
+    let botaoadicionando = event.target.closest(".adicionandoitem");
+    let botaoremover = event.target.closest(".removeritem");
+    if(botaoadicionando){
+        const nomedoitem = botaoadicionando.closest("[data-name]").getAttribute("data-name")
+        const preitem = botaoadicionando.closest("[data-price]").getAttribute("data-price")
+        adicionarCarrinho(nomedoitem, preitem);
+    }
+
+    if(botaoremover){
+        const nomeitem2 = botaoremover.closest("[data-name]").getAttribute("data-name")
+        removeItemCarrinho(nomeitem2)
     }
 })
 
@@ -247,6 +275,4 @@ if(estaaberto){
     caixadohorario.classList.remove("bg-green-600");
     caixadohorario.classList.add("bg-red-500");
 }
-
-
 
