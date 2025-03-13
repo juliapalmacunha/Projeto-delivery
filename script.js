@@ -244,7 +244,7 @@ finalizarcarrinho.addEventListener("click", function(){
      }).join("")
 
      const mensagem = encodeURIComponent(pedido)
-     const telefone = "994846339"
+     const telefone = "998890088"
 
      window.open(`https://wa.me/${telefone}?text=${mensagem} Endereço: ${endereco.value}`, "_blank")
      //blank serve para abrir em uma nova aba
