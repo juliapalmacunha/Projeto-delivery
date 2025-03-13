@@ -10,7 +10,7 @@ O **Delivery Burguer** é uma aplicação web de pedidos online para um restaura
 - **Adicionar Múltiplos Produtos**: É possível adicionar o mesmo produto várias vezes ao carrinho e o total será atualizado automaticamente.
 - **Remover Produtos**: Remova itens do carrinho completamente ou ajuste a quantidade de cada produto diretamente no carrinho.
 - **Redirecionamento para o WhatsApp**: Após finalizar o pedido, o usuário é automaticamente redirecionado para o WhatsApp do restaurante.
-- **Status do WhatsApp**: O status do WhatsApp é atualizado automaticamente. Ele estará **ativo** quando o restaurante estiver aberto e **inativo** quando o restaurante estiver fechado.
+- **Status de disponibilidade**: O status do envio do pedido será retratado através do verde e vermelho onde encontra-se os horários na interface de forma automatica. Ele estará **ativo** para envio quando o restaurante estiver aberto e **inativo** quando o restaurante estiver fechado de acordo com o horário programado.
 - **Design Responsivo**: A interface foi projetada para ser responsiva e proporcionar uma boa experiência em dispositivos móveis e desktops.
 
 ---
