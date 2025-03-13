@@ -29,12 +29,12 @@ Para rodar o projeto localmente em seu computador, siga os passos abaixo:
 
 1. **Clone o repositório**:
     ```bash
-    git clone https://github.com/seu-usuario/delivery-burguer.git
+    git clone https://github.com/seu-usuario/Projeto-delivery.git
     ```
 
 2. **Navegue até o diretório do projeto**:
     ```bash
-    cd delivery-burguer
+    cd Projeto-delivery
     ```
 
 3. **Abra o arquivo `index.html`** em seu navegador:
